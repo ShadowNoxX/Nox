@@ -2,23 +2,23 @@ import requests
 import threading
 import time
 
-id = "Sr3U2Eov"
-THREADS = 50
+# CONFIGURATION
+id = "ReplaceMe!" # The id of the Lockee
+THREADS = 50 # the number of threads
+limit = 10000 # The limit of digit searching. It needs to be a multiple of the value of variable THREADS otherwise it won't be precise
+            # and will take longer time
+start = 0 # The start digit 0
+length = 4 # The length of digit code EXAMPLE if 4: 0 -> 0000, 12 -> 0012, 310 -> 0310
 
+# ACTUAL CODE
 threads = []
 found = False
-
-limit = 9999
 range_ = round(limit / THREADS)
-start = 0
 current = 0
-
-
 headers = {
     "referer": f"https://lockee.fr/{id}",
     "x-requested-with": "XMLHttpRequest"
 }
-
 def req(start_, amount_):
     global found
     global current
@@ -42,7 +42,7 @@ def req(start_, amount_):
 
 def add(code):
     code +=1
-    return str(code).zfill(4)
+    return str(code).zfill(length)
 
 
 first = time.time()
