@@ -8,7 +8,7 @@
 <h4 align="center">A Lockee digit finder</h4>
 <p align="center">
   <img src="https://img.shields.io/github/last-commit/ShadowNoxX/Nox">
-  <img src="https://img.shields.io/github/license/ShadowNoxX/Nox">d
+  <img src="https://img.shields.io/github/license/ShadowNoxX/Nox">
   <img src="https://img.shields.io/github/stars/ShadowNoxX/Nox">
 </p>
 <p align="center">
